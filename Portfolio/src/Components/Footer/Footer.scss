@@ -1,0 +1,25 @@
+.footer {
+    background-color: var(--bg-perpule);
+    footer {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        h2 {
+            color: var(--white);
+            span {
+                color: var(--bg-light-yellow);
+                font-weight: 200;
+            }
+        }
+        h6 {
+            color: var(--white);
+            font-size: 1rem;
+            font-weight: 300;
+            letter-spacing: 0.1rem;
+        }
+    }
+}

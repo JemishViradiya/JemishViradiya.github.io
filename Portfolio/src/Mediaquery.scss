@@ -1,0 +1,271 @@
+@media (max-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    .MainHeader {
+        nav {
+            position: relative;
+            .MenuList {
+                display: none;
+            }
+            .logo {
+                width: 50%;
+            }
+            .smMenuList {
+                width: 50%;
+                display: block;
+                text-align: end;
+                button {
+                    background: none;
+                    border: none;
+                    font-size: 1.3rem;
+                    color: var(--bg-perpule);
+                }
+                .Hide {
+                    display: none;
+                }
+                .Show {
+                    display: block;
+                    position: absolute;
+                    width: 95%;
+                    left: 2.5%;
+                    top: 100%;
+                    text-align: center;
+                    background: #6f34fe;
+                    z-index: 11;
+                    border-radius: 1rem;
+                    li {
+                        padding: 0.8rem;
+                        font-size: 1.1rem;
+                        color: #fff;
+                        transition: all 0.1s !important;
+                        cursor: pointer;
+                        &:hover {
+                            letter-spacing: 0.2rem;
+                            // color: #f9d051;
+                        }
+                    }
+                    .activeMenu {
+                        span {
+                            color: #f9d051;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .HomeBody {
+        .MainTitle {
+            text-align: center;
+        }
+        section {
+            .MainDetails {
+                .right {
+                    width: 100%;
+                    text-align: center;
+                    .detailHeader {
+                        justify-content: center;
+                        h3 {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+                .new_right {
+                    width: 100%;
+                    text-align: center;
+                }
+                .detailBody {
+                    .topic {
+                        .topicDiv {
+                            width: 25%;
+                        }
+                    }
+                }
+                .userDetails {
+                    width: 100%;
+                    text-align: center;
+                    .contactBtns {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                .userImages {
+                    display: none;
+                }
+                .selectBox,
+                .selectedDetails {
+                    width: 100%;
+                    margin: 1rem 0;
+                }
+            }
+            .educationdiv {
+                display: flex;
+                flex-direction: column;
+            }
+            .experincediv {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+
+            .skills {
+                .skillscircle {
+                    justify-content: space-around;
+                    .card {
+                        h2 {
+                            margin-top: 0px;
+                        }
+                        margin: 1rem !important;
+                        &:hover {
+                            .percent {
+                                .number {
+                                    h2 {
+                                        font-size: 45px;
+                                    }
+                                }
+                            }
+                        }
+
+                        .percent {
+                            svg {
+                                circle {
+                                    r: 50 !important;
+                                    stroke-width: 7px !important;
+                                }
+                            }
+                            .number {
+                                h2 {
+                                    font-size: 30px;
+                                }
+                            }
+                        }
+                        &:nth-child(1) svg circle:nth-child(2) {
+                            stroke-dashoffset: 157 !important;
+                        }
+                        &:nth-child(2) svg circle:nth-child(2) {
+                            stroke-dashoffset: 157 !important;
+                        }
+                        &:nth-child(3) svg circle:nth-child(2) {
+                            stroke-dashoffset: 157 !important;
+                        }
+                        &:nth-child(4) svg circle:nth-child(2) {
+                            stroke-dashoffset: 157 !important;
+                        }
+                        &:nth-child(5) svg circle:nth-child(2) {
+                            stroke-dashoffset: 172.2 !important;
+                        }
+                        &:nth-child(6) svg circle:nth-child(2) {
+                            stroke-dashoffset: 172.2 !important;
+                        }
+                        &:nth-child(7) svg circle:nth-child(2) {
+                            stroke-dashoffset: 180.55 !important;
+                        }
+                        &:nth-child(8) svg circle:nth-child(2) {
+                            stroke-dashoffset: 180.55 !important;
+                        }
+                        &:nth-child(9) svg circle:nth-child(2) {
+                            stroke-dashoffset: 180.55 !important;
+                        }
+                        &:nth-child(10) svg circle:nth-child(2) {
+                            stroke-dashoffset: 180.55 !important;
+                        }
+                        &:nth-child(11) svg circle:nth-child(2) {
+                            stroke-dashoffset: 180.55 !important;
+                        }
+                    }
+                    img {
+                        display: none !important;
+                        right: 0px !important;
+                    }
+                }
+            }
+
+            // .skills {
+            //     .skillBg {
+            //         width: 100%;
+            //     }
+            // }
+            .projectt {
+                .projects {
+                    width: 49%;
+                    margin: 3rem auto;
+                    &::after {
+                        height: 100%;
+                    }
+                }
+
+                .clones {
+                    width: 49%;
+                    margin: 3rem auto;
+                    &::after {
+                        height: 100%;
+                    }
+                }
+            }
+            .touch-row {
+                .address,
+                .contact-me {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        max-width: 95%;
+    }
+    .HomeBody {
+        section {
+            .project_clones {
+                display: block;
+            }
+            .project-box {
+                .projects {
+                    // width: 96%;
+                    width: 280px;
+                    height: 280px;
+                    figcaption {
+                        p {
+                            font-size: 11.5px;
+                        }
+                    }
+                }
+                .clones {
+                    width: 280px;
+                    height: 280px;
+                }
+            }
+            .MainDetails {
+                .detailBody {
+                    .topic {
+                        .topicDiv {
+                            width: 47%;
+                        }
+                    }
+                }
+            }
+            .touch-row {
+                .address {
+                    .address-box {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

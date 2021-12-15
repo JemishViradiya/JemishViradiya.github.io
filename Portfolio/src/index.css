@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+:root {
+  --white: #fff;
+  --black: #2c2c2c;
+  --bg-perpule: #6f34fe;
+  --bg-light-yellow: #ffd43a;
+  --bg-light-grey: #f6f9fe;
+  --bg-box-shadow: 0 0.188rem 1.25rem 0px rgba(0, 0, 0, 0.06);
+  --bg-card-shadow: 0 2rem 5rem rgb(0, 0, 0, 0.06);
+  --bg-light-grey-1: #eee;
+
+  --text-light-black: #444;
+  --text-light-grey: #7e8085;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #eef6fe;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-perpule);
+  border-radius: 2px;
+}
+
+h1 {
+  font-size: 3.563rem;
+  line-height: 4.563rem;
+  letter-spacing: 0.125rem;
+  font-weight: 400;
+}
+h2 {
+  font-size: 2.875rem;
+  line-height: 3.75rem;
+  font-weight: 400;
+}
+h3 {
+  font-size: 1.563rem;
+  line-height: 2.375rem;
+  font-weight: 400;
+}
+
+h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 0.063rem;
+  line-height: 1.688rem;
+  text-transform: uppercase;
+}
+
+section {
+  position: relative;
+  box-shadow: var(--bg-card-shadow);
+  /* padding: 100px 0; */
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+a {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+button {
+  cursor: pointer;
+}
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+ol li,
+ul li {
+  list-style: none;
+}
+
+button,
+button:focus {
+  outline: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
