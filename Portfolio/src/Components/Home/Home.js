@@ -65,7 +65,7 @@ export const Home = () => {
                 </div>
               </div>
               <div className="userImages">
-                <img src="./Assest/bgshape/Profile.jpeg" alt="" />
+                <img src="./myprofile.png" alt="" />
               </div>
             </div>
           </div>

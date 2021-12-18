@@ -55,6 +55,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+           
             .detailHeader {
                 display: flex;
                 align-items: center;
@@ -128,6 +129,7 @@
                 width: 45%;
             }
             .userDetails {
+                margin-top: 2%;
                 width: 60%;
                 h2 {
                     margin: 3rem 0 1rem;
