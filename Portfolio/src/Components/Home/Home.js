@@ -61,7 +61,7 @@ export const Home = () => {
                 </p>
                 <div className="contactBtns">
                   <button className="perpuleBtn" onClick={contactme}>Contact Me</button>
-                  <a className="outlineBtn" href="./Assest/Jemish Viradiya-Resume.pdf">Download CV</a>
+                  <a className="outlineBtn" href="./Assest/Jemish Viradiya - Resume.pdf">Download CV</a>
                 </div>
               </div>
               <div className="userImages">
@@ -496,6 +496,19 @@ export const Home = () => {
             </div>
             <div className="projectt">
               <div className="project-box" style={{ display: projects ? 'flex' : 'none', alignItems: 'center', justifyContent: "space-between", position: 'relative', flexWrap: 'wrap' }}>
+              <div className="projects">
+                  <figure>
+                    <img src="../Assest/projects/BankingApp.gif" alt="Portfolio Item" />
+                    <figcaption>
+                      <h4>Online Banking Application (2021)</h4>
+                      <p>BOA is online banking app, throgh we can manage our bank account including deposite, Transfer fund, Bill Payment, Open new account, Statement etc.</p>
+                      <span><b>Technologies :</b>  JAVA, Spring, Maven, MYSQL</span>
+                      <div className="buttondiv">
+                        <a href="https://github.com/JemishViradiya/BankingSystem" className="Learn_More">Learn More</a>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
                 <div className="projects">
                   <figure>
                     <img src="../Assest/projects/p1.png" alt="Portfolio Item" />
