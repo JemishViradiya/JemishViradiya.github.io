@@ -15,7 +15,8 @@
 
     .contactBtns {
         margin-top: 2rem;
-        button, a {
+        button,
+        a {
             font-size: 1.1rem;
             padding: 0.7rem 1rem;
             border: none;
@@ -55,7 +56,7 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-           
+
             .detailHeader {
                 display: flex;
                 align-items: center;
@@ -158,9 +159,9 @@
 
             .selectBox {
                 position: relative;
-                width: 45%;
+                width: 40%;
                 .clgBox {
-                    max-width: 45%;
+                    // max-width: 45%;
                     box-shadow: var(--bg-card-shadow);
                     background-color: var(--white);
                     padding: 1rem;
@@ -169,7 +170,7 @@
                     min-width: 200px;
                     cursor: pointer;
                     min-height: 200px;
-                    margin-bottom: 4rem;
+                    margin-bottom: 2rem;
                     text-align: center;
                     display: flex;
                     flex-direction: column;
@@ -185,8 +186,8 @@
                         transform: scale(0.9);
                     }
                     img {
-                        width: 100px;
-                        height: 100px;
+                        width: 70px;
+                        height: 70px;
                         object-fit: contain;
                     }
                     h3 {
