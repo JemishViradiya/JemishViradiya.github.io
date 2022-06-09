@@ -46,7 +46,7 @@ export const Home = () => {
     setactivecompony(val)
   }
 
-  const [activecompony, setactivecompony] = useState("blackBerry");
+  const [activecompony, setactivecompony] = useState("synpulse");
 
   return (
     <div className="Main">
@@ -434,6 +434,21 @@ export const Home = () => {
             <div className="MainDetails experincediv">
 
               <div className="new_right" id="compony_details">
+              <div className="selectedDetails" style={{ display: activecompony === "synpulse" ? 'block' : 'none' }}>
+                  <div className="detailHeader">
+                    <img src="../Assest/componylogo/synpulse.jpg" alt="" />
+                    <div>
+                      <h3>Synpulse Inc.</h3>
+                      <span>(ontario, canada)</span>
+                    </div>
+                  </div>
+                  <div className="detailBody">
+                    <h3>Software Developer (May 2022 - current)</h3>
+                    <p>
+                    I am working as a software developer in Synpulse Inc., Handling clients and providing fintech solution to big giant financial institution.
+                    </p>
+                  </div>
+                </div>
                 <div className="selectedDetails" style={{ display: activecompony === "blackBerry" ? 'block' : 'none' }}>
                   <div className="detailHeader">
                     <img src="../Assest/componylogo/blackberry.png" alt="" />
@@ -443,9 +458,9 @@ export const Home = () => {
                     </div>
                   </div>
                   <div className="detailBody">
-                    <h3>Software Developer Intern (Jan 2022 - current)</h3>
+                    <h3>Software Developer Intern (Jan 2022 - April 2022)</h3>
                     <p>
-                      I am working as a software developer intern in Blackberry. My responsibilities are to implementing functionalities
+                      I was working as a software developer intern in Blackberry. My responsibilities are to implementing functionalities
                       in existing system, create test cases and solve defects.
                     </p>
                   </div>
@@ -486,6 +501,15 @@ export const Home = () => {
 
 
               <div className="selectBox selectBox1">
+                <div className="clgBox expBox" >
+                  <img src="../Assest/componylogo/synpulse.jpg" alt="" />
+                  <h3>Synpulse Inc.</h3>
+                  <div className="contactBtns">
+                    <Link to="compony_details" spy={true} smooth={true}>
+                      <button className="perpuleBtn" onClick={() => handlecompony("synpulse")}>View Detail</button>
+                    </Link>
+                  </div>
+                </div>
                 <div className="clgBox expBox" >
                   <img src="../Assest/componylogo/blackberry.png" alt="" />
                   <h3>Blackberry Technologies</h3>
