@@ -46,7 +46,7 @@ export const Home = () => {
     setactivecompony(val)
   }
 
-  const [activecompony, setactivecompony] = useState("synpulse");
+  const [activecompony, setactivecompony] = useState("blackBerry");
 
   return (
     <div className="Main">
@@ -434,21 +434,6 @@ export const Home = () => {
             <div className="MainDetails experincediv">
 
               <div className="new_right" id="compony_details">
-              <div className="selectedDetails" style={{ display: activecompony === "synpulse" ? 'block' : 'none' }}>
-                  <div className="detailHeader">
-                    <img src="../Assest/componylogo/synpulse.jpg" alt="" />
-                    <div>
-                      <h3>Synpulse Inc.</h3>
-                      <span>(ontario, canada)</span>
-                    </div>
-                  </div>
-                  <div className="detailBody">
-                    <h3>Software Developer (May 2022 - current)</h3>
-                    <p>
-                    I am working as a software developer in Synpulse Inc., Handling clients and providing fintech solution to big giant financial institution.
-                    </p>
-                  </div>
-                </div>
                 <div className="selectedDetails" style={{ display: activecompony === "blackBerry" ? 'block' : 'none' }}>
                   <div className="detailHeader">
                     <img src="../Assest/componylogo/blackberry.png" alt="" />
