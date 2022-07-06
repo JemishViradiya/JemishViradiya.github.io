@@ -486,15 +486,7 @@ export const Home = () => {
 
 
               <div className="selectBox selectBox1">
-                <div className="clgBox expBox" >
-                  <img src="../Assest/componylogo/synpulse.jpg" alt="" />
-                  <h3>Synpulse Inc.</h3>
-                  <div className="contactBtns">
-                    <Link to="compony_details" spy={true} smooth={true}>
-                      <button className="perpuleBtn" onClick={() => handlecompony("synpulse")}>View Detail</button>
-                    </Link>
-                  </div>
-                </div>
+                
                 <div className="clgBox expBox" >
                   <img src="../Assest/componylogo/blackberry.png" alt="" />
                   <h3>Blackberry Technologies</h3>
