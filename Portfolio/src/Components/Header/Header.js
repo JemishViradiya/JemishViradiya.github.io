@@ -26,11 +26,11 @@ export const Header = () => {
               <li className={isActive === 'Home' ? 'activeMenu' : null}>
                 <Link onClick={e => handeleactive('Home')} to="home" spy={true} smooth={true}><span>Home</span></Link>
               </li>
-              <li className={isActive == 'Education' ? 'activeMenu' : null} >
+              <li className={isActive === 'Education' ? 'activeMenu' : null} >
                 <Link onClick={e => handeleactive('Education')} to="Education" spy={true} smooth={true}><span >Education</span></Link>
 
               </li>
-              <li className={isActive == 'Skills' ? 'activeMenu' : null}>
+              <li className={isActive === 'Skills' ? 'activeMenu' : null}>
                 <Link onClick={e => handeleactive('Skills')} to="skills" spy={true} smooth={true}><span >Skills</span></Link>
 
               </li>
@@ -38,11 +38,11 @@ export const Header = () => {
                 <Link onClick={e => handeleactive('Experince')} to="experince" spy={true} smooth={true}><span >Experince</span></Link>
 
               </li>
-              <li className={isActive == 'Portfolio' ? 'activeMenu' : null} >
+              <li className={isActive === 'Portfolio' ? 'activeMenu' : null} >
                 <Link onClick={e => handeleactive('Portfolio')} to="Portfolio" spy={true} smooth={true}><span>Portfolio</span></Link>
 
               </li>
-              <li className={isActive == 'Contact' ? 'activeMenu' : null}>
+              <li className={isActive === 'Contact' ? 'activeMenu' : null}>
                 <Link onClick={e => handeleactive('Contact')} to="Contact" spy={true} smooth={true}><span>Contact</span></Link>
 
               </li>
@@ -59,12 +59,12 @@ export const Header = () => {
                   <span className="activeMenu">Home</span>
                 </Link>
               </li>
-              <li className={isActive == 'Education' ? 'activeMenu' : null}>
+              <li className={isActive === 'Education' ? 'activeMenu' : null}>
                 <Link onClick={e => handeleactive('Education')} to="Education" spy={true} smooth={true}>
                   <span >Education</span>
                 </Link>
               </li>
-              <li className={isActive == 'Skills' ? 'activeMenu' : null}>
+              <li className={isActive === 'Skills' ? 'activeMenu' : null}>
                 <Link onClick={e => handeleactive('Skills')} to="skills" spy={true} smooth={true}>
                   <span >Skills</span>
                 </Link>
@@ -74,13 +74,13 @@ export const Header = () => {
                   <span>Experince</span>
                 </Link>
               </li>
-              <li className={isActive == 'Portfolio' ? 'activeMenu' : null}>
+              <li className={isActive === 'Portfolio' ? 'activeMenu' : null}>
                 <Link onClick={e => handeleactive('Portfolio')} to="Portfolio" spy={true} smooth={true}>
                   <span>Portfolio</span>
                 </Link>
               </li>
-              <li className={isActive == 'Contact' ? 'activeMenu' : null}>
-                <Link className={isActive == 'Contact' ? 'activeMenu' : null} to="Contact" spy={true} smooth={true}>
+              <li className={isActive === 'Contact' ? 'activeMenu' : null}>
+                <Link className={isActive === 'Contact' ? 'activeMenu' : null} to="Contact" spy={true} smooth={true}>
                   <span onClick={handeleactive}>Contact</span>
                 </Link>
               </li>

@@ -192,68 +192,7 @@ export const Home = () => {
           </div>
         </section>
 
-        {/* <section id="Experince">
-          <div className="container">
-            <div className="MainTitle">
-              <span>my skills</span>
-            </div>
-            <div className="skills">
-              <div className="skillBg">
-                <div className="skillProgress">
-                  <span>HTML / CSS</span>
-                </div>
-              </div>
-              <div className="skillBg">
-                <div className="skillProgress">
-                  <span>database</span>
-                </div>
-              </div>
-              <div className="skillBg">
-                <div className="skillProgress">
-                  <span>C</span>
-                </div>
-              </div>
-
-              <div className="skillBg">
-                <div className="skillProgress w-85">
-                  <span>java</span>
-                </div>
-              </div>
-              <div className="skillBg">
-                <div className="skillProgress w-85">
-                  <span>asp.net</span>
-                </div>
-              </div>
-
-              <div className="skillBg">
-                <div className="skillProgress w-80">
-                  <span>java(j2ee)</span>
-                </div>
-              </div>
-              <div className="skillBg">
-                <div className="skillProgress w-80">
-                  <span>javascript</span>
-                </div>
-              </div>
-              <div className="skillBg">
-                <div className="skillProgress w-80">
-                  <span>angular js</span>
-                </div>
-              </div>
-              <div className="skillBg">
-                <div className="skillProgress w-80">
-                  <span>node js</span>
-                </div>
-              </div>
-              <div className="skillBg">
-                <div className="skillProgress w-80">
-                  <span>react js</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
+       
         <section id="skills">
           <div className="container">
             <div className="MainTitle">
@@ -272,7 +211,7 @@ export const Home = () => {
                       <circle cx="70" cy="70" r="70"></circle>
                     </svg>
                     <div class="number">
-                      <h2>90<span>%</span></h2>
+                      <h2>70<span>%</span></h2>
                     </div>
                   </div>
                   <h2 class="text">Html</h2>
@@ -299,7 +238,7 @@ export const Home = () => {
                       <circle cx="70" cy="70" r="70"></circle>
                     </svg>
                     <div class="number">
-                      <h2>90<span>%</span></h2>
+                      <h2>70<span>%</span></h2>
                     </div>
                   </div>
                   <h2 class="text">Database</h2>
@@ -313,7 +252,7 @@ export const Home = () => {
                       <circle cx="70" cy="70" r="70"></circle>
                     </svg>
                     <div class="number">
-                      <h2>90<span>%</span></h2>
+                      <h2>60<span>%</span></h2>
                     </div>
                   </div>
                   <h2 class="text">C</h2>
@@ -343,7 +282,7 @@ export const Home = () => {
                       <circle cx="70" cy="70" r="70"></circle>
                     </svg>
                     <div class="number">
-                      <h2>85<span>%</span></h2>
+                      <h2>70<span>%</span></h2>
                     </div>
                   </div>
                   <h2 class="text">Asp.Net</h2>
@@ -357,7 +296,7 @@ export const Home = () => {
                       <circle cx="70" cy="70" r="70"></circle>
                     </svg>
                     <div class="number">
-                      <h2>80<span>%</span></h2>
+                      <h2>70<span>%</span></h2>
                     </div>
                   </div>
                   <h2 class="text">JAVA(J2EE)</h2>
@@ -385,7 +324,7 @@ export const Home = () => {
                       <circle cx="70" cy="70" r="70"></circle>
                     </svg>
                     <div class="number">
-                      <h2>80<span>%</span></h2>
+                      <h2>75<span>%</span></h2>
                     </div>
                   </div>
                   <h2 class="text">Angular JS</h2>
