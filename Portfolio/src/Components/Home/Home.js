@@ -25,7 +25,7 @@ export const Home = () => {
   const saveFile = () => {
 
     saveAs(
-      "http://localhost:3000/Assest/Jemish Viradiya-Resume.pdf",
+      "https://jemish-viradiya-portfolio-app.herokuapp.com/Assest/Jemish Viradiya-Resume.pdf",
 
     );
   };
