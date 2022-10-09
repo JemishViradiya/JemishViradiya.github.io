@@ -46,7 +46,7 @@ export const Home = () => {
     setactivecompony(val)
   }
 
-  const [activecompony, setactivecompony] = useState("blackBerry");
+  const [activecompony, setactivecompony] = useState("synpulse");
 
   return (
     <div className="Main">
@@ -75,7 +75,7 @@ export const Home = () => {
                 </div>
               </div>
               <div className="userImages">
-                <img src="./myprofile.png" alt="" />
+                <img src="./profilePic.png" alt="" />
               </div>
             </div>
           </div>
@@ -373,6 +373,21 @@ export const Home = () => {
             <div className="MainDetails experincediv">
 
               <div className="new_right" id="compony_details">
+              <div className="selectedDetails" style={{ display: activecompony === "synpulse" ? 'block' : 'none' }}>
+                  <div className="detailHeader">
+                    <img src="../Assest/componylogo/synpulse.jpg" alt="" />
+                    <div>
+                      <h3>Synpulse</h3>
+                      <span>(ontario, canada)</span>
+                    </div>
+                  </div>
+                  <div className="detailBody">
+                    <h3>Full Stack Developer (May 2022 - Present)</h3>
+                    <p>
+                      I am working as a full stack developer in Synpulse. I am a part of client's project devleopment team, as well as reposible for organization's tech guys in North America
+                    </p>
+                  </div>
+                </div>
                 <div className="selectedDetails" style={{ display: activecompony === "blackBerry" ? 'block' : 'none' }}>
                   <div className="detailHeader">
                     <img src="../Assest/componylogo/blackberry.png" alt="" />
@@ -425,13 +440,21 @@ export const Home = () => {
 
 
               <div className="selectBox selectBox1">
-                
+              <div className="clgBox expBox" >
+                  <img src="../Assest/componylogo/synpulse.jpg" alt="" />
+                  <h3>Synpulse</h3>
+                  <div className="contactBtns">
+                    <Link to="compony_details" spy={true} smooth={true}>
+                      <button className="perpuleBtn" onClick={() => handlecompony("synpulse")}>View Details</button>
+                    </Link>
+                  </div>
+                </div>
                 <div className="clgBox expBox" >
                   <img src="../Assest/componylogo/blackberry.png" alt="" />
                   <h3>Blackberry Technologies</h3>
                   <div className="contactBtns">
                     <Link to="compony_details" spy={true} smooth={true}>
-                      <button className="perpuleBtn" onClick={() => handlecompony("blackBerry")}>View Detail</button>
+                      <button className="perpuleBtn" onClick={() => handlecompony("blackBerry")}>View Details</button>
                     </Link>
                   </div>
                 </div>
@@ -440,7 +463,7 @@ export const Home = () => {
                   <h3>Gatway Techno Labs</h3>
                   <div className="contactBtns">
                     <Link to="compony_details" spy={true} smooth={true}>
-                      <button className="perpuleBtn" onClick={() => handlecompony("getway")}>View Detail</button>
+                      <button className="perpuleBtn" onClick={() => handlecompony("getway")}>View Details</button>
                     </Link>
                   </div>
                 </div>
@@ -450,7 +473,7 @@ export const Home = () => {
                   <h3>BrainyBeam Technologies</h3>
                   <div className="contactBtns">
                     <Link to="compony_details" spy={true} smooth={true}>
-                      <button className="perpuleBtn" onClick={() => handlecompony("brainBeam")}>View Detail</button>
+                      <button className="perpuleBtn" onClick={() => handlecompony("brainBeam")}>View Details</button>
                     </Link>
                   </div>
                 </div>
