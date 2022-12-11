@@ -51,7 +51,7 @@ export const Header = () => {
 
           <div className="smMenuList">
             <button onClick={() => settoggle(!toggle)}>
-              <i class="fas fa-bars"></i>
+              <i className="fas fa-bars"></i>
             </button>
             <ul className={toggle ? "Show" : "Hide"}>
               <li className={isActive === 'Home' ? 'activeMenu' : null}>
