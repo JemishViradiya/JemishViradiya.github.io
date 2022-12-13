@@ -79,7 +79,7 @@ export const Home = () => {
 
   const saveFile = () => {
     saveAs(
-      "https://jemish-viradiya-portfolio-app.herokuapp.com/Assest/Jemish Viradiya-Resume.pdf"
+      "https://jemish-viradiya.s3.amazonaws.com/Assest/Jemish+Viradiya-Resume+.pdf"
     );
   };
 
