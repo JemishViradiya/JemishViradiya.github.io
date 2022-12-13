@@ -9,6 +9,7 @@ const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 export const Home = () => {
   const [div, setdiv] = useState(true);
   const [isActive, setActive] = useState(false);
+  const [companyProjectToggle, setCompanyProjectToggle] = useState(false);
   const [projects, setprojects] = useState(true);
   const [activecompony, setactivecompony] = useState("synpulse");
   const [activatecompanyDetails, setActivateCompanyDetails] =
@@ -445,19 +446,19 @@ export const Home = () => {
                     <div className="experince_details">
                       <div className="option">
                         <button
-                          className={isActive ? null : "activeBtn"}
+                          className={companyProjectToggle ? null : "activeBtn"}
                           onClick={() => {
                             setActivateCompanyDetails("responsibilities");
-                            setActive(!isActive);
+                            setCompanyProjectToggle(!companyProjectToggle);
                           }}
                         >
                           Technologies
                         </button>
                         <button
-                          className={isActive ? "activeBtn" : null}
+                          className={companyProjectToggle ? "activeBtn" : null}
                           onClick={() => {
                             setActivateCompanyDetails("projects");
-                            setActive(!isActive);
+                            setCompanyProjectToggle(!companyProjectToggle);
                           }}
                         >
                           Projects
