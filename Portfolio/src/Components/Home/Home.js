@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
-import { saveAs } from "file-saver";
+import resume from "../../Resume/resume.pdf"
 import "./Home.scss";
 import { Link } from "react-scroll";
 
@@ -77,12 +77,6 @@ export const Home = () => {
     setdiv(false);
   };
 
-  const saveFile = () => {
-    saveAs(
-      "https://jemish-viradiya.s3.amazonaws.com/Assest/Jemish+Viradiya-Resume+.pdf"
-    );
-  };
-
   const handleprojects = () => {
     setprojects(true);
     setActive(!isActive);
@@ -121,18 +115,18 @@ export const Home = () => {
                   <button className="perpuleBtn" onClick={contactme}>
                     Contact Me
                   </button>
-                  <Link src="./file/Jemish Viradiya-Resume.pdf">
-                    <button className="outlineBtn" onClick={saveFile}>
+                  <a href={resume}>
+                    <button className="outlineBtn" >
                       {" "}
                       Download CV
                     </button>
-                  </Link>
+                  </a>
                   {/* <a className="outlineBtn" href="./Assest/Jemish Viradiya-Resume.pdf">Download CV</a> */}
                 </div>
               </div>
-              <div className="userImages">
-                <img src="./profilePic.png" alt="" />
-              </div>
+              <span className="userImages">
+                <img src="./Profile12.jpg" alt="" />
+              </span>
             </div>
           </div>
         </section>
