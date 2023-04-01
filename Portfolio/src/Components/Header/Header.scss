@@ -1,73 +1,72 @@
 .MainHeader {
-    box-shadow: var(--bg-card-shadow);
-    background-color: #eef6fe;
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-    nav {
-        display: flex;
-        align-items: center;
-        padding: 1rem 0;
+  box-shadow: var(--bg-card-shadow);
+  background-color: #eef6fe;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
 
-        .logo {
-            width: 20%;
-            h3 {
-                color: var(--text-light-black);
-                letter-spacing: 0.9px;
-                span {
-                    color: var(--bg-perpule);
-                    font-weight: 600;
-                }
-            }
+    .logo {
+      width: 20%;
+      h3 {
+        color: var(--text-light-black);
+        letter-spacing: 0.9px;
+        span {
+          color: var(--bg-perpule);
+          font-weight: 600;
         }
-        .MenuList {
-            width: 80%;
-            text-align: end;
-            ul {
-                li {
-                    display: inline-block;
-                    span {
-                        display: block;
-                        padding: 0.7rem 0.4rem;
-                        font-size: 1rem;
-                        color: var(--text-light-grey);
-                        font-weight: 600;
-                        letter-spacing: 0.5px;
-                        cursor: pointer;
-                        position: relative;
-                        transition: all 0.3s;
-                        margin: 0 0.3rem;
-                        &::after {
-                            content: "";
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            height: 3px;
-                            background: var(--bg-light-yellow);
-                            width: 0%;
-                            transition: all 0.3s;
-                        }
-                        &:hover {
-                            color: var(--bg-perpule);
-                            &::after {
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-                .activeMenu {
-                    span {
-                        color: var(--bg-perpule);
-                        &::after {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-
-        .smMenuList {
-            display: none;
-        }
+      }
     }
+    .MenuList {
+      width: 80%;
+      text-align: end;
+      ul {
+        li {
+          display: inline-block;
+          span {
+            display: block;
+            padding: 0.7rem 0.4rem;
+            font-size: 1rem;
+            color: var(--text-light-grey);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s;
+            margin: 0 0.3rem;
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 3px;
+              background: var(--bg-light-yellow);
+              width: 0%;
+              transition: all 0.3s;
+            }
+            &:hover {
+              color: var(--bg-perpule);
+              &::after {
+                width: 100%;
+              }
+            }
+          }
+        }
+        .activeMenu {
+          span {
+            color: var(--bg-perpule);
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .smMenuList {
+      display: none;
+    }
+  }
 }

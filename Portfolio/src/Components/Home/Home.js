@@ -1,13 +1,15 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Header } from "../Header/Header";
 import { Footer } from "../Footer/Footer";
-import resume from "../../Resume/resume.pdf"
+import resume from "../../Resume/resume.pdf";
 import "./Home.scss";
 import { Link } from "react-scroll";
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 export const Home = () => {
   const [div, setdiv] = useState(true);
+  const [catalogDetails, setCatalogDetails] = useState([]);
+  const [headerData, setHeaderData] = useState([]);
   const [isActive, setActive] = useState(false);
   const [companyProjectToggle, setCompanyProjectToggle] = useState(false);
   const [projects, setprojects] = useState(true);
@@ -17,10 +19,64 @@ export const Home = () => {
 
   const myref = useRef(null);
 
+  useEffect(() => {
+    getCatalog();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
+    getAllDetails();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [catalogDetails]);
+
+  const getCatalog = async () => {
+    const response = await fetch(
+      "https://b98jt02t2i.execute-api.us-east-1.amazonaws.com/details/catalog"
+    );
+    const data = await response.json();
+    if (data?.body) {
+      setCatalogDetails(data.body);
+    } else {
+      setCatalogDetails([]);
+    }
+  };
+
+  const getAllDetails = async () => {
+    let details = {};
+    if (catalogDetails?.length > 0 && catalogDetails) {
+      for (const catalog of catalogDetails) {
+        if (catalog) {
+          let response = await fetch(
+            `https://b98jt02t2i.execute-api.us-east-1.amazonaws.com/details/company/getinfo?tableName=${catalog?.name}`
+          );
+          let data = await response.json();
+          if (data?.statusCode === 200) {
+            if (data?.body) {
+              details = {
+                ...details,
+                [catalog?.name?.toLowerCase()]: data?.body,
+              };
+            }
+          }
+        }
+      }
+      setInitials(details);
+    }
+  };
+
+  const setInitials = (details) => {
+    if (details) {
+      let sortedLinks = details?.links?.sort(
+        (a, b) => a?.position - b?.position
+      );
+      setHeaderData(sortedLinks ?? []);
+    }
+  };
+
   const synpulseTechnologyStack = [
     {
-      path:"../Assest/technologies/aws.png",
-      name:"AWS Services"
+      path: "../Assest/technologies/aws.png",
+      name: "AWS Services",
     },
     {
       path: "../Assest/technologies/react.png",
@@ -92,7 +148,7 @@ export const Home = () => {
 
   return (
     <div className="Main">
-      <Header />
+      <Header headerData={headerData} />
       <div className="HomeBody">
         <section id="home">
           <div className="container">
@@ -116,10 +172,7 @@ export const Home = () => {
                     Contact Me
                   </button>
                   <a href={resume}>
-                    <button className="outlineBtn" >
-                      {" "}
-                      Download CV
-                    </button>
+                    <button className="outlineBtn"> Download CV</button>
                   </a>
                   {/* <a className="outlineBtn" href="./Assest/Jemish Viradiya-Resume.pdf">Download CV</a> */}
                 </div>
@@ -130,8 +183,7 @@ export const Home = () => {
             </div>
           </div>
         </section>
-
-        <section id="Education">
+        <section id="education">
           <div className="container">
             <div className="MainTitle">
               <span>EDUCATION</span>
@@ -236,7 +288,6 @@ export const Home = () => {
             </div>
           </div>
         </section>
-
         <section id="skills">
           <div className="container">
             <div className="MainTitle">
@@ -415,7 +466,7 @@ export const Home = () => {
           </div>
         </section>
 
-        <section id="experince">
+        <section id="experience">
           <div className="container">
             <div className="MainTitle">
               <span>experiance</span>
@@ -468,7 +519,7 @@ export const Home = () => {
                         }}
                       >
                         <div className="technologyDetails">
-                          {synpulseTechnologyStack.map(({path, name}) => (
+                          {synpulseTechnologyStack.map(({ path, name }) => (
                             <div className="tech">
                               <img src={path} alt="" />
                               <h4>{name}</h4>
@@ -476,41 +527,60 @@ export const Home = () => {
                           ))}
                         </div>
                       </div>
-                      <div className="compnayProjects"
-                      style={{
-                        display:
-                          activatecompanyDetails === "projects"
-                            ? "flex"
-                            : "none",
-                      }}
+                      <div
+                        className="compnayProjects"
+                        style={{
+                          display:
+                            activatecompanyDetails === "projects"
+                              ? "flex"
+                              : "none",
+                        }}
                       >
                         <div className="project">
-                          <img src="../Assest/companyProjects/ACPI.png" alt="" />
+                          <img
+                            src="../Assest/companyProjects/ACPI.png"
+                            alt=""
+                          />
                           <h4>Aligned Capital Partners</h4>
-                          <br/>
-                          <div className="projectTech">
-                            <span>AWS</span><span>React JS</span><span>JAVA</span>
-                            <span>ANT Design</span><span>ZOHO</span><span>postgreSQL</span>
-                          </div>
                           <br />
-                          <p>Developed Financial advisory platform for client's advisors.
-                            There are total 13 different functionalities to perform by advisors to maintain client's
-                            accounts. And, my team has developed those 13 workflows, including QA and UAT of each workflows.
-                          </p>
-                        </div>
-                        <div className="project">
-                          <img src="../Assest/companyProjects/thoughtMachine.png" alt="" />
-                          <h4>Thought Machine</h4>
-                          <br/>
                           <div className="projectTech">
-                            <span>AWS</span><span>Hashicorp Vault</span><span>Terraform</span>
-                            <span>Docker</span><span>Kubernetes</span>
+                            <span>AWS</span>
+                            <span>React JS</span>
+                            <span>JAVA</span>
+                            <span>ANT Design</span>
+                            <span>ZOHO</span>
+                            <span>postgreSQL</span>
                           </div>
                           <br />
                           <p>
-                            Setup the thought machine vault instance on AWS using EC2, EKS, RDS,
-                            VPC, Python, S3 Buckets. Run docker images on EKS cluster to configure
-                            vault environment. 
+                            Developed Financial advisory platform for client's
+                            advisors. There are total 13 different
+                            functionalities to perform by advisors to maintain
+                            client's accounts. And, my team has developed those
+                            13 workflows, including QA and UAT of each
+                            workflows.
+                          </p>
+                        </div>
+                        <div className="project">
+                          <img
+                            src="../Assest/companyProjects/thoughtMachine.png"
+                            alt=""
+                          />
+                          <h4>Thought Machine</h4>
+                          <br />
+                          <div className="projectTech">
+                            <span>AWS</span>
+                            <span>Hashicorp Vault</span>
+                            <span>Terraform</span>
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                          </div>
+                          <br />
+                          <p>
+                            Setup the thought machine vault instance on AWS
+                            using EC2, EKS, RDS, VPC, Python, S3 Buckets. Run
+                            docker images on EKS cluster to configure vault
+                            environment.
                           </p>
                         </div>
                       </div>
@@ -655,7 +725,7 @@ export const Home = () => {
           </div>
         </section>
 
-        <section id="Portfolio">
+        <section id="portfolio">
           <div className="container">
             <div className="MainTitle project_clones">
               <span>my projects</span>
@@ -954,7 +1024,7 @@ export const Home = () => {
           </div>
         </section>
 
-        <section id="Contact" ref={myref}>
+        <section id="contact" ref={myref}>
           <div className="container">
             <div className="MainTitle">
               <span>get in touch</span>
